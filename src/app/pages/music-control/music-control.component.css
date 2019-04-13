@@ -1,0 +1,138 @@
+input[type=range] {
+  -webkit-appearance: none;
+  width: 500px;
+  border-radius: 5px; /*这个属性设置使填充进度条时的图形为圆角*/
+  background: -webkit-linear-gradient(#e93939, #e93939) no-repeat, #c1c1c1;
+  background-size: 0 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 5px; /*将轨道设为圆角的*/
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  width: 8px;
+  margin-top: -1.5px; /*使滑块超出轨道部分的偏移量相等*/
+  background: #ffffff;
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(256, 256, 256, 0.8); /*设置边框*/
+  box-shadow:0 0 .125em  .125em #c1c1c1;; /*添加底部阴影*/
+}
+
+.Audio{
+  width: 100%;
+  height: 80px;
+  background: #f9f9f9;
+  border-top: 1px solid #c1c1c1;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+.main{
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+.left-control{
+  height: 30px;
+  width: 160px;
+  margin: 25px 0;
+  float: left;
+}
+.left-control-icon{
+  height: 30px;
+  width: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.musicInfo{
+  width: 710px;
+  height: 80px;
+  padding: 10px;
+  float: left;
+  display: inline;
+}
+.musicImage{
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+.musicImage img{
+  width: 60px;
+  height: 60px;
+}
+.musicNameAndSinger{
+  height: 30px;
+  line-height: 30px;
+  margin: 0 0 0 80px;
+  font-size: 14px;
+}
+.musicName{
+  color: #000000;
+  float: left;
+}
+.musicSinger{
+  display: inline;
+  color: #777777;
+  padding-left: 20px;
+}
+.musicRange{
+  margin: 0 0 0 20px;
+  width: 530px;
+  float: left;
+}
+.musicTime{
+  width: 80px;
+  color: #000000;
+  height: 20px;
+  margin-top: 5px;
+  line-height: 20px;
+  font-size: 12px;
+  float: right;
+}
+.right-control{
+  width: 90px;
+  height: 30px;
+  margin-top: 40px;
+  float: left;
+}
+.right-control-icon{
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+.volume-control{
+  margin-left: 10px;
+  float: left;
+  position: relative;
+}
+.volumeRange{
+  width: 90px;
+  height: 15px;
+  background: #c1c1c1;
+  border-radius: 15px;
+  transform:  rotate(270deg);
+  position: absolute;
+  top: -50px;
+  right: -35px;
+}
+.volumeRange input{
+  width: 80px;
+  cursor: pointer;
+  background: -webkit-linear-gradient(red, red) no-repeat, #ffffff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.play-mode-control{
+  float: left;
+  height: 18px;
+  width: 18px;
+}

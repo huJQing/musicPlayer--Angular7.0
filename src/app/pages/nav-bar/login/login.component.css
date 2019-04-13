@@ -1,0 +1,63 @@
+.modal{
+  width: 400px;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.modal-header{
+  padding: 0.5rem 1rem;
+  background: #c20c0c;
+}
+.modal-title{
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.modal-header .close{
+  padding: 0.5rem 0.5rem;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+}
+.close{
+  color: #ffffff;
+  opacity: 1;
+}
+.modal-header:active,.close:active{
+  border: none !important;
+}
+.login-form{
+  margin-top: 20px;
+}
+.login-form-item{
+  width: 250px;
+  margin: 0 75px;
+}
+input:focus {
+  border: #c20c0c;
+  box-shadow: 0 0 0 0.2rem rgba(233,57,57,.25);
+}
+.login-form-btn{
+  width: 250px;
+  margin: 20px 60px 0 60px;
+  border: 1px solid #c20c0c;
+  color: #ffffff;
+  background: #c20c0c;
+}
+.login-form-btn:focus,.login-form-btn:active{
+  background: #c20c0c !important;
+  border: #c20c0c;
+  box-shadow: 0 0 0 0.2rem rgba(233,57,57,.25) !important;
+}
+.modal-footer{
+  padding: 10px 10px;
+}
+.goto-register{
+  font-size: 12px;
+  float: right;
+  color: #c1c1c1;
+  cursor: pointer;
+}
+.errorTips{
+  width: 250px;
+  margin: 0 60px;
+  color: #c20c0c;
+}

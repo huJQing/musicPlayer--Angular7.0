@@ -1,0 +1,38 @@
+<div class="Audio">
+  <div class="main">
+    <div class="left-control">
+      <img src="assets/backward.png" class="left-control-icon" (click)="prevMusic()">
+      <img src="{{isPlaying ? 'assets/pause.png' : 'assets/caret-right.png'}}" class="left-control-icon" (click)="playMusic(true)">
+      <img src="assets/forward.png" class="left-control-icon" (click)="nextMusic()">
+    </div>
+    <div class="musicInfo">
+      <div class="musicImage">
+        <img [src]="nowPlayMusic.albumPic">
+      </div>
+      <div class="musicNameAndSinger">
+        <div class="musicName">
+          {{nowPlayMusic.songName}}
+        </div>
+        <div class="musicSinger">
+          {{nowPlayMusic.singerName}}
+        </div>
+      </div>
+      <div class="musicRange">
+          <input type="range" min="0" max="100" [value]="musicTimeRangeValue" (input)="musicRangeChange($event)" id="timeRange" [ngStyle]="musicTimeRangeStyle" style="cursor: pointer;"/>
+      </div>
+      <div class="musicTime">{{musicCurrentTime | formatTime}}/{{nowPlayMusic.songTime/10 | formatTime}}</div>
+    </div>
+    <div class="right-control">
+      <div class="play-mode-control">
+        <img [src]="playModeIconUrl" class="right-control-icon" (click)="changePlayMode()">
+      </div>
+      <div class="volume-control">
+        <img src="assets/volume.png" class="right-control-icon" (click)="showVolumeRangeControl()">
+        <div class="volumeRange" [style.display]="showVolumeRange ? 'block':'none'">
+          <input type="range" min="0" max="100" [value]="volumeRangeValue" (input)="volumeRangeChange($event)"  [ngStyle]="volumeRangeStyle"/>
+        </div>
+      </div>
+    </div>
+    <audio class="musicAudio" [src]="nowPlayMusicUrl" (ended)="nextMusic()" autoplay="autoplay" (canplay)="musicProgress()"></audio>
+  </div>
+</div>

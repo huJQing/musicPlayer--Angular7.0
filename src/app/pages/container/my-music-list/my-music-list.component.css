@@ -1,0 +1,92 @@
+.login-tips{
+  height: 270px;
+  width: 810px;
+  margin: 100px 0 0 85px;
+  background-image: url("../../../../assets/loginTips.png");
+}
+.login-tips-title{
+  display: block;
+  margin-left:476px;
+  padding-top: 20px;
+  color: #6c6c6c;
+}
+
+.no-music{
+  height: 150px;
+  width: 230px;
+  margin: 180px 0 0 350px;
+  background-image: url("../../../../assets/disc.png");
+}
+.no-music-title{
+  font-size: 22px;
+  display: block;
+  margin-left:18px;
+  padding-top: 160px;
+  color: #6c6c6c;
+}
+
+.my-music-list{
+  width: 100%;
+  color: #000000;
+  position: relative;
+}
+tr{
+  color: #000000;
+}
+/*.music-table{
+  width: 100%;
+  font-size: 14px;
+}
+.music-table thead{
+  width: 100%;
+}*/
+.my-music-list-table{
+  min-height: 490px;
+  border: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+}
+.table{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.table td{
+  border-top: none;
+}
+.table thead tr{
+  color: #b5b5b5;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.02);
+}
+.table tbody tr:hover{
+  background: rgba(190,190,190,.4) !important;
+  cursor: pointer;
+}
+.item-control-btn{
+  width: 150px;
+}
+.item-control-btn img{
+  display: none;
+}
+tr:hover .item-control-btn img{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  float: left;
+}
+
+.page-link{
+  background: #ffffff;
+  color: #000000;
+}
+.page-item{
+  width: 40px !important;
+  text-align: center;
+}
+.item-active{
+  background: #e9e9e9;
+}
+.page-link:focus {
+  box-shadow: 0 0 0 0.15rem rgba(190,190,190,.25);
+}

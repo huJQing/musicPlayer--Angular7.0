@@ -1,0 +1,58 @@
+<div class="login-tips" *ngIf="!isLogin">
+  <h3 class="login-tips-title">立即登录</h3>
+</div>
+
+<div class="no-music" *ngIf="isLogin && musicList[0] == undefined">
+  <h3 class="no-music-title">您还未收藏任何歌曲</h3>
+</div>
+
+<div class="my-music-list" *ngIf="isLogin && musicList[0] != undefined">
+  <div class="my-music-list-table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td width="400">歌曲</td>
+        <td width="150"></td>
+        <td>歌手</td>
+        <td>专辑</td>
+        <td>时长</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr (dblclick)="changeMusicList(i)" *ngFor="let item of musicList; let i = index">
+      <td>{{item.songname}}</td>
+      <td class="item-control-btn">
+        <img src="assets/play.png" title="播放" (click)="changeMusicList(i)">
+        <img src="assets/download.png" title="下载" (click)="downloadMusic(item.songid, item.songname)">
+        <img src="assets/delete.png" title="移除" (click)="removeMusic(item.songid)">
+      </td>
+      <td>{{item.singername}}</td>
+      <td>{{item.albumname}}</td>
+      <td>{{item.songtime/10 | formatTime}}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <nav aria-label="Page navigation example" class="music-pagination">
+    <ul class="pagination pagination-sm  justify-content-end">
+      <li class="page-item">
+        <a class="page-link" href="javascript:void(0);" aria-label="Previous" (click)="previousPage()">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);" [class.item-active]="pageIndex == 1" (click)="clickPageItem(1)">{{firstPaginationIndex}}</a></li>
+      <li class="page-item" *ngFor="let item of paginationItemList">
+        <a class="page-link" href="javascript:void(0);" [class.item-active]="pageIndex == item" (click)="clickPageItem(item)">{{(item !='l'&&item != 'r') ? item:'...'}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="javascript:void(0);" aria-label="Next"  (click)="nextPage()">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

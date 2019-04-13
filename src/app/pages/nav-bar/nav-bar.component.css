@@ -1,0 +1,90 @@
+.nav-bar{
+  background: #c20c0c;
+  height: 60px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.main{
+  width: 1000px;
+  height: 60px;
+  margin: 0 auto;
+}
+.music-nav{
+  height: 40px;
+  width: 400px;
+}
+.nav-bar-left{
+  height: 100%;
+  width: 50px;
+  float: left;
+}
+.logo{
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  float: left;
+}
+.nav-bar-center{
+  width: 400px;
+  height: 60px;
+  float: left;
+}
+.music-nav-item{
+  height: 60px;
+  width: 4em;
+  margin: 0 1em;
+  line-height: 60px;
+  color: #d8d8d8;
+  font-size: 16px;
+  text-align: center;
+  float: left;
+  font-weight: normal;
+  cursor: pointer;
+}
+.music-nav-item a{
+  display: block;
+  height: 60px;
+  width: 4em;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.active{
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+.nav-bar-right{
+  width: 170px;
+  height: 100%;
+  float: right;
+}
+.login{
+  height: 60px;
+  width: 170px;
+}
+.nickname{
+  height: 60px;
+  width: 100px;
+  line-height: 60px;
+  color: #ffffff;
+  font-size: 12px;
+  float: left;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+.loginButton{
+  height: 24px;
+  line-height: 15px;
+  width: 70px;
+  color: #c20c0c;
+  border-radius: 28px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  font-size: 12px;
+  float: right;
+  margin-top: 18px;
+}
+.loginButton:focus{
+  box-shadow: 0 0 0 0.2rem rgba(256,256,256,.3);
+}
