@@ -4,7 +4,6 @@
 前端部分仿照网页云，后端部分可以使用爬虫来爬取，前端部分只需修改API即可
 
 
->>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 
 ## Development server
 
@@ -31,8 +30,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 <<<<<<< HEAD
 >>>>>>> first
-<<<<<<< HEAD
-=======
+>>>>>>>
+>>>>>>> <<<<<<< HEAD
+>>>>>>> =======
 
 >>>>>>> 4901f4da8ba51ec43a8bd2d535e5a37f3edf4c2d
 =======
