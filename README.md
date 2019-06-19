@@ -1,12 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-# musicPlayer
-基于Angular7.0实现的网易云爬虫音乐播放器
-=======
-# Music
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
-=======
 # 基于Angular7.0实现的网页端播放器前端部分
 
 前端部分仿照网页云，后端部分可以使用爬虫来爬取，前端部分只需修改API即可
