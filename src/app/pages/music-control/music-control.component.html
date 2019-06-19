@@ -1,5 +1,6 @@
 <div class="Audio">
   <div class="main">
+<<<<<<< HEAD
     <div class="music-play-list" *ngIf="showMusicList">
       <div class="play-list-title">播放列表({{musicList.length}})</div>
       <div data-spy="scroll" class="music-list-scroll">
@@ -22,6 +23,16 @@
     <div class="musicInfo">
       <div class="musicImage">
         <img [src]="nowPlayMusic.albumPic == 'undefined' || nowPlayMusic.albumPic == undefined || musicList.length == 0 ? 'http://47.100.197.56/static/image/music2.png': nowPlayMusic.albumPic ">
+=======
+    <div class="left-control">
+      <img src="assets/backward.png" class="left-control-icon" (click)="prevMusic()">
+      <img src="{{isPlaying ? 'assets/pause.png' : 'assets/caret-right.png'}}" class="left-control-icon" (click)="playMusic(true)">
+      <img src="assets/forward.png" class="left-control-icon" (click)="nextMusic()">
+    </div>
+    <div class="musicInfo">
+      <div class="musicImage">
+        <img [src]="nowPlayMusic.albumPic">
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       </div>
       <div class="musicNameAndSinger">
         <div class="musicName">
@@ -37,18 +48,29 @@
       <div class="musicTime">{{musicCurrentTime | formatTime}}/{{nowPlayMusic.songTime/10 | formatTime}}</div>
     </div>
     <div class="right-control">
+<<<<<<< HEAD
       <div class="volume-control">
         <img src="http://47.100.197.56/static/image/volume.png" class="right-control-icon" (click)="showVolumeRangeControl()">
+=======
+      <div class="play-mode-control">
+        <img [src]="playModeIconUrl" class="right-control-icon" (click)="changePlayMode()">
+      </div>
+      <div class="volume-control">
+        <img src="assets/volume.png" class="right-control-icon" (click)="showVolumeRangeControl()">
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         <div class="volumeRange" [style.display]="showVolumeRange ? 'block':'none'">
           <input type="range" min="0" max="100" [value]="volumeRangeValue" (input)="volumeRangeChange($event)"  [ngStyle]="volumeRangeStyle"/>
         </div>
       </div>
+<<<<<<< HEAD
       <div class="play-mode-control">
         <img [src]="playModeIconUrl" class="right-control-icon" (click)="changePlayMode()">
       </div>
       <div class="music-list-control">
         <img src="http://47.100.197.56/static/image/musicList.png" class="right-control-icon" (click)="showMusicListControl()">
       </div>
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
     </div>
     <audio class="musicAudio" [src]="nowPlayMusicUrl" (ended)="nextMusic()" autoplay="autoplay" (canplay)="musicProgress()"></audio>
   </div>

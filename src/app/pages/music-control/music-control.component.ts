@@ -2,8 +2,11 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import {MusicEmitService} from '../../services/musicEmit/music-emit.service';
 import {MusicService} from '../../services/music/music.service';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+<<<<<<< HEAD
 import {UserService} from '../../services/user/user.service';
 import {Router} from '@angular/router';
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 
 @Component({
   selector: 'app-music-control',
@@ -22,11 +25,17 @@ export class MusicControlComponent implements OnInit {
   volumeRangeStyle = {'background-size' : '100% 100%'}; /*音量滑动选择器中白色背景色的长度*/
   musicTimePromise; /*实时更新播放时间以及range滑动选择器的定时器*/
   showVolumeRange = false; /*是否显示音量控件*/
+<<<<<<< HEAD
   showMusicList = false; /*是否显示播放歌曲列表*/
   nowPlayMode = 'repeat-all'; /*当前的播放模式*/
   playModelList = ['repeat-all', 'repeat-random', 'repeat-one'];
   playModeIconUrl = 'http://47.100.197.56/static/image/repeat-all.png';  /*播放模式图标的路径*/
   navigationSubscription;
+=======
+  nowPlayMode = 'repeat-all'; /*当前的播放模式*/
+  playModelList = ['repeat-all', 'repeat-random', 'repeat-one'];
+  playModeIconUrl = 'assets/repeat-all.png';  /*播放模式图标的路径*/
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   /*播放音乐
   * pauseHandel： string， 是否可以暂停音乐。设置此变量是为了在拖动滑动选择器时，可以直接开始播放音乐；在点击见面按钮时，可以暂停也可以播放音乐
   * */
@@ -110,6 +119,7 @@ export class MusicControlComponent implements OnInit {
   showVolumeRangeControl() {
     this.showVolumeRange = !this.showVolumeRange;
   }
+<<<<<<< HEAD
   /*点击显示歌曲列表*/
   showMusicListControl() {
     this.showMusicList = !this.showMusicList;
@@ -117,6 +127,11 @@ export class MusicControlComponent implements OnInit {
   volumeRangeChange(e) {
     this.el.nativeElement.querySelector('.musicAudio').volume = e.target.value / 100;
     this.volumeRangeStyle = {'background-size' : (e.target.value) + '% 100%'};
+=======
+  volumeRangeChange(e) {
+    this.el.nativeElement.querySelector('.musicAudio').volume = e.target.value / 100; /*获取当前歌曲总时长*/
+    this.volumeRangeStyle = {'background-size' : (e.target.value) + '% 100%'}; /*根据range选择器中的值设置range选择器的背景长度*/
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
     this.volumeRangeValue = e.target.value;
   }
   /*更改播放模式*/
@@ -124,6 +139,7 @@ export class MusicControlComponent implements OnInit {
     let index = this.playModelList.indexOf(this.nowPlayMode);
     if (index === 2) { index = -1; }
     this.nowPlayMode = this.playModelList[index + 1];
+<<<<<<< HEAD
     this.playModeIconUrl = 'http://47.100.197.56/static/image/' + this.playModelList[index + 1] + '.png';
   }
   /*获取下一首歌曲播放地址并且播放*/
@@ -136,6 +152,17 @@ export class MusicControlComponent implements OnInit {
           if ( this.musicList[index].source === 'tencent') {
             this.getTencentAlbumImg(this.musicList[index].albumId);
           }
+=======
+    this.playModeIconUrl = 'assets/' + this.playModelList[index + 1] + '.png';
+  }
+  /*获取下一首歌曲播放地址并且播放*/
+  getNextMusicUrlAndPlay(index) {
+    this.musicService.searchUrl(this.musicList[index].songId).subscribe(
+      (data: any) => {
+        if (data.status !== 'error' && data !== null) {
+          this.nowPlayMusic = this.musicList[index];
+          this.nowPlayMusicUrl = this.sanitizer.bypassSecurityTrustResourceUrl(data);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
           this.isPlaying = true;
           /*以下是清重置range滑动选择器的背景，
           重置歌曲当前播放到的时间，
@@ -145,10 +172,16 @@ export class MusicControlComponent implements OnInit {
           this.musicTimeRangeValue = 0;
           this.musicTimeRangeStyle = {'background-size' : '0 100%'};
           this.musicCurrentTime = 0;
+<<<<<<< HEAD
+=======
+        } else {
+          console.log('error');
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         }
       }
     );
   }
+<<<<<<< HEAD
   /*获取QQ音乐的专辑封面*/
   getTencentAlbumImg(albumId) {
     this.musicService.getTencentAlbumData(albumId).subscribe(
@@ -160,11 +193,16 @@ export class MusicControlComponent implements OnInit {
   /*用户没有登录时，默认搜索华语流行，加入播放列表*/
   getDefaultMusic() {
     this.musicService.searchMusic('华语流行', 1, 'netease').subscribe(
+=======
+  getDefaultMusic() {
+    this.musicService.searchMusic('华语流行', 1).subscribe(
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       (data: any) => {
         if (data.status !== 'error') {
           this.musicList = data;
           this.nowPlayMusic = data[0];
         }
+<<<<<<< HEAD
       });
   }
   /*用户登录时，获取用户的收藏歌曲，加入播放列表*/
@@ -186,16 +224,30 @@ export class MusicControlComponent implements OnInit {
   changNowPlayMusic(index) {
     this.getNextMusicUrlAndPlay(index);
   }
+=======
+      }
+    );
+  }
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   constructor(
     private el: ElementRef,
     private musicEmitService: MusicEmitService,
     private musicService: MusicService,
+<<<<<<< HEAD
     private sanitizer: DomSanitizer,
     private userService: UserService
   ) { }
   ngOnInit() { // 接收发射过来的数据
     this.musicEmitService.eventEmit.subscribe(
       (data: any) => {
+=======
+    private sanitizer: DomSanitizer
+  ) { }
+  ngOnInit() {// 接收发射过来的数据
+    this.musicEmitService.eventEmit.subscribe(
+      (data: any) => {
+        console.log(data);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       if (data.type === 'single') {/*插入单曲*/
         let index = 0;
         let haveMusic = false;
@@ -215,6 +267,7 @@ export class MusicControlComponent implements OnInit {
         } else {
           this.getNextMusicUrlAndPlay(index);
         }
+<<<<<<< HEAD
       } else if (data.type === 'musicList') {/*插入歌曲列表*/
         this.musicList = data.musicList;
         this.getNextMusicUrlAndPlay(data.index);
@@ -226,6 +279,12 @@ export class MusicControlComponent implements OnInit {
     } else {
       this.getDefaultMusic();
     }
+=======
+        console.log(this.musicList);
+      }
+    });
+    this.getDefaultMusic();
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   }
 
 }

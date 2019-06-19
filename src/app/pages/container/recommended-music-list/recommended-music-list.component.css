@@ -1,12 +1,20 @@
 .recommendedMusicList{
   width: 100%;
+<<<<<<< HEAD
   height: 540px;
+=======
+  height: 504px;
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   position: relative;
 }
 .music-list{
   width: 120px;
   height: 160px;
+<<<<<<< HEAD
   margin: 0 21px 20px  21px;
+=======
+  margin: 0 21px 5px  21px;
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   float: left;
 }
 .list-cover{
@@ -28,6 +36,7 @@
   height: 120px;
   width: 120px;
   cursor: pointer;
+<<<<<<< HEAD
   border: 1px solid #d8d8d8;
 }
 .list-name{
@@ -39,4 +48,14 @@
   overflow:hidden;
   text-overflow:ellipsis;
   white-space: normal;
+=======
+}
+.list-name{
+  width: 120px;
+  height: 35px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  cursor: pointer;
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 }

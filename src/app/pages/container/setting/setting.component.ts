@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import {UserService} from '../../../services/user/user.service';
 import {Router} from '@angular/router';
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 
 @Component({
   selector: 'app-setting',
@@ -8,6 +11,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./setting.component.css']
 })
 export class SettingComponent implements OnInit {
+<<<<<<< HEAD
   isLogin = false;
   userid = '';
   nickname = '';
@@ -55,6 +59,12 @@ export class SettingComponent implements OnInit {
     } else {
       this.router.navigateByUrl('/');
     }
+=======
+
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   }
 
 }

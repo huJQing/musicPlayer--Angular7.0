@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "/":{
+=======
+  "/music":{
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
     "target":"http://47.100.197.56/",
     "secure":false,
     "logLevel":"debug",

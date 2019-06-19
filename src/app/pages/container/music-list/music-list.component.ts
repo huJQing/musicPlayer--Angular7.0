@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {MusicService} from '../../../services/music/music.service';
+<<<<<<< HEAD
 import {MusicEmitService} from '../../../services/musicEmit/music-emit.service';
 import {UserService} from '../../../services/user/user.service';
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 
 @Component({
   selector: 'app-music-list',
@@ -10,6 +13,7 @@ import {UserService} from '../../../services/user/user.service';
   styleUrls: ['./music-list.component.css']
 })
 export class MusicListComponent implements OnInit {
+<<<<<<< HEAD
   isLogin = false; /*是否登录*/
   userid = ''; /*用户id*/
   listId = '';
@@ -83,6 +87,17 @@ export class MusicListComponent implements OnInit {
       this.userid = userInfo.userid;
       this.isLogin = true;
     }
+=======
+  listId = '';
+  constructor(
+    private activatedRoute: ActivatedRoute,
+  ) {
+    this.listId = this.activatedRoute.snapshot.paramMap.get('listId');
+    console.log(this.listId);
+  }
+
+  ngOnInit() {
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   }
 
 }

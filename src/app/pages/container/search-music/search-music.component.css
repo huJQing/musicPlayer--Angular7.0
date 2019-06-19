@@ -12,11 +12,19 @@ tr{
   border: 1px solid #d8d8d8;
   margin-bottom: 10px;
 }
+<<<<<<< HEAD
 .table {
   font-size: 14px;
   margin-bottom: 0;
 }
 .table td, .table th {
+=======
+.table{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.table td{
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   border-top: none;
 }
 .table thead tr{

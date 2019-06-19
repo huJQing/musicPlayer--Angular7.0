@@ -1,5 +1,6 @@
 <div class="music-list">
   <div class="music-list-info">
+<<<<<<< HEAD
     <img src="{{discInfo.dissPic == '' || discInfo.dissPic == undefined ? 'http://47.100.197.56/static/image/music2.png': discInfo.dissPic}}" class="music-list-logo">
     <div class="list-info-container">
       <div class="music-list-title">
@@ -13,6 +14,18 @@
       </div>
       <div class="music-list-listen-num" *ngIf="discInfo.listenNum != ''">
         播放量：{{discInfo.listenNum}}
+=======
+    <img src="//p.qpic.cn/music_cover/nvRBiaJHaPBvG00iczEYfbu8xatvkYfTFbv5Xazia8XtrNfJ1cw35DDdA/300?n=1" class="music-list-logo">
+    <div class="list-info-container">
+      <div class="music-list-title">
+        2019已经过去¼ 你的目标完成的怎么样了？
+      </div>
+      <div class="music-list-author">
+        清风徐来
+      </div>
+      <div class="music-list-time">
+        2019-04-01 创建
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       </div>
     </div>
   </div>
@@ -21,7 +34,10 @@
       <thead>
       <tr>
         <td>歌曲</td>
+<<<<<<< HEAD
         <td></td>
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         <td>歌手</td>
         <td>专辑</td>
         <td>时长</td>
@@ -29,6 +45,7 @@
       </tr>
       </thead>
       <tbody>
+<<<<<<< HEAD
       <tr (dblclick)="changeMusicList(i)" *ngFor="let item of musicList; let i = index">
         <td>{{item.songName}}</td>
         <td class="item-control-btn">
@@ -39,6 +56,83 @@
         <td>{{item.singerName}}</td>
         <td style="overflow: hidden">{{item.albumName}}</td>
         <td>{{item.songTime/10 | formatTime}}</td>
+=======
+      <tr>
+        <td>祝星</td>
+        <td>陈粒</td>
+        <td>如也</td>
+        <td>3:18</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>自己</td>
+        <td>许均</td>
+        <td>万松岭</td>
+        <td>3:50</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>野子</td>
+        <td>苏运莹</td>
+        <td>中国好声音</td>
+        <td>5:22</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>祝星</td>
+        <td>陈粒</td>
+        <td>如也</td>
+        <td>3:18</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>自己</td>
+        <td>许均</td>
+        <td>万松岭</td>
+        <td>3:50</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>野子</td>
+        <td>苏运莹</td>
+        <td>中国好声音</td>
+        <td>5:22</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>祝星</td>
+        <td>陈粒</td>
+        <td>如也</td>
+        <td>3:18</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>自己</td>
+        <td>许均</td>
+        <td>万松岭</td>
+        <td>3:50</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>野子</td>
+        <td>苏运莹</td>
+        <td>中国好声音</td>
+        <td>5:22</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>野子</td>
+        <td>苏运莹</td>
+        <td>中国好声音</td>
+        <td>5:22</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>野子</td>
+        <td>苏运莹</td>
+        <td>中国好声音</td>
+        <td>5:22</td>
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         <td></td>
       </tr>
       </tbody>

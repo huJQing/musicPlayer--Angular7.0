@@ -16,7 +16,10 @@ import { MusicListComponent } from './pages/container/music-list/music-list.comp
 import { LoginComponent } from './pages/nav-bar/login/login.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+<<<<<<< HEAD
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 
 const routeConfig: Routes = [
   { path: '', component: MyMusicListComponent},
@@ -52,8 +55,12 @@ const routeConfig: Routes = [
       )],
   ],
   providers: [
+<<<<<<< HEAD
     MusicEmitService,
     { provide: LocationStrategy, useClass: HashLocationStrategy, }
+=======
+    MusicEmitService
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   ],
   bootstrap: [AppComponent]
 })

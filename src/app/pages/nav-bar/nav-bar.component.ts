@@ -65,12 +65,19 @@ export class NavBarComponent implements OnInit, OnDestroy {
 
   initLoad(event: NavigationEnd) { /*当路由改变时，重新判断登录状态，同时根据url实时变化navList中active的元素*/
     for ( const i in this.navList) {
+<<<<<<< HEAD
       if ( event.url === '/' && i === '0') {
         this.navList[0].active = true;
       } else if ('/' + this.navList[i].url === event.url) {
         this.navList[i].active = true;
       } else if ( event.url.indexOf('/musicList') !== -1) {
         this.navList[1].active = true;
+=======
+      if ( event.url === '/' ) {
+        this.navList[0].active = true;
+      } else if ('/' + this.navList[i].url === event.url) {
+        this.navList[i].active = true;
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       } else {
         this.navList[i].active = false;
       }

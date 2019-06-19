@@ -32,11 +32,14 @@
   float: left;
   margin-top: 5px;
 }
+<<<<<<< HEAD
 .music-list-listen-num{
   clear: both;
   color: #c1c1c1;
   padding-top: 5px;
 }
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 .music-list-time{
   margin-left: 3em;
 }
@@ -65,6 +68,7 @@ tr{
   background: rgba(190,190,190,.4) !important;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .item-control-btn{
   width: 150px;
 }
@@ -78,3 +82,5 @@ tr:hover .item-control-btn img{
   margin: 0 5px;
   float: left;
 }
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba

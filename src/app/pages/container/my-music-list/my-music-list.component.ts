@@ -14,7 +14,10 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
   isLogin = false; /*是否登录*/
   userid = ''; /*用户id*/
   musicList = []; /*歌曲列表*/
+<<<<<<< HEAD
   showNoMusicTips = false; /*显示没有收藏歌曲的提示*/
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   total = 0; /*表格总数据*/
   pageIndex = 1; /*分页器当前选中页码*/
   firstPaginationIndex = 1; /*分页器第一页页码*/
@@ -28,6 +31,10 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
     } else {
       this.pageIndex = e;
     }
+<<<<<<< HEAD
+=======
+    console.log(this.pageIndex);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
     this.buildPagination();
     this.getCollectingMusic();
   }
@@ -81,7 +88,10 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
     }
     this.paginationItemList = paginationItemList;
   }
+<<<<<<< HEAD
   /*将歌曲添加到播放列表*/
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   changeMusicList(i) {
     const data = {
       type: 'musicList',
@@ -94,6 +104,7 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
   getCollectingMusic() {
     this.musicService.getCollectingMusic(this.userid, this.pageIndex).subscribe(
       (data: any) => {
+<<<<<<< HEAD
         if ( data.status !== 'error') {
           this.musicList = data;
           if (data[0] !== undefined) {
@@ -101,6 +112,14 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
             this.buildPagination();
           } else {
             this.showNoMusicTips = true;
+=======
+        console.log(data);
+        if ( data.status !== 'error') {
+          this.musicList = data;
+          if (data[0] !== undefined) {
+            this.total = data[0].songcount;
+            this.buildPagination();
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
           }
         }
       }
@@ -110,10 +129,15 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
   removeMusic(songid) {
     this.musicService.removeMusic(this.userid, songid).subscribe(
       (data: any) => {
+<<<<<<< HEAD
+=======
+        console.log(data);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         if (data.status === 'success') {
           this.getCollectingMusic();
         }
       }
+<<<<<<< HEAD
       );
   }
   /*下载音乐*/
@@ -122,6 +146,18 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
       (data: any) => {
         if (data !== 'error' && data !== null) {
           window.open(data.musicUrl);
+=======
+    );
+  }
+  /*下载音乐*/
+  downloadMusic(songId, songName) {
+    this.musicService.searchUrl(songId).subscribe(
+      (data: any) => {
+        if (data !== 'error' && data !== null) {
+          window.open(data);
+        } else {
+          console.log('error');
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         }
       }
     );
@@ -145,8 +181,11 @@ export class MyMusicListComponent implements OnInit, OnDestroy {
       this.userid = userInfo.userid;
       this.isLogin = true;
       this.getCollectingMusic();
+<<<<<<< HEAD
     } else {
       this.isLogin = false;
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
     }
   }
   ngOnInit() {

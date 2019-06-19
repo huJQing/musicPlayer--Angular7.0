@@ -1,4 +1,5 @@
 .nav-bar{
+<<<<<<< HEAD
   width: 100%;
   background: #c20c0c;
   height: 60px;
@@ -7,6 +8,15 @@
 .main{
   width: 1000px;
   background: #c20c0c;
+=======
+  background: #c20c0c;
+  height: 60px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.main{
+  width: 1000px;
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   height: 60px;
   margin: 0 auto;
 }
@@ -29,7 +39,10 @@
   width: 400px;
   height: 60px;
   float: left;
+<<<<<<< HEAD
   font-size: 16px;
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 }
 .music-nav-item{
   height: 60px;

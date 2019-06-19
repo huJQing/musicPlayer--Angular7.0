@@ -11,7 +11,11 @@ import {UserService} from '../../../services/user/user.service';
 export class SearchMusicComponent implements OnInit {
   isLogin = false; /*是否登录*/
   userid = ''; /*用户id*/
+<<<<<<< HEAD
   searchFrom = '网易云'; /*搜索的资源是网易还是qq*/
+=======
+  searchFrom = '网易云';
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
   musicList = []; /*歌曲列表*/
   total = 0; /*表格总数据*/
   pageIndex = 1; /*分页器当前选中页码*/
@@ -97,6 +101,7 @@ export class SearchMusicComponent implements OnInit {
   }
   musicSearch() {
     if (this.searchValue === '' ) { return 0; }
+<<<<<<< HEAD
     let sourse = 'netease';
     if ( this.searchFrom !== '网易云') {
       sourse = 'tencent';
@@ -104,6 +109,12 @@ export class SearchMusicComponent implements OnInit {
     this.musicService.searchMusic(this.searchValue, this.pageIndex , sourse).subscribe(
       (data: any) => {
         if (data.status !== 'error') {
+=======
+    this.musicService.searchMusic(this.searchValue, this.pageIndex).subscribe(
+      (data: any) => {
+        if (data.status !== 'error') {
+          console.log(data);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
           this.musicList = data;
           this.total = data[0].songCount;
           this.buildPagination();
@@ -112,21 +123,40 @@ export class SearchMusicComponent implements OnInit {
     );
   }
   /*下载音乐*/
+<<<<<<< HEAD
   downloadMusic(songId, source) {
     this.musicService.searchUrl(songId, source).subscribe(
       (data: any) => {
         if (data !== 'error' && data !== null) {
           window.open(data.musicUrl);
+=======
+  downloadMusic(songId, songName) {
+    this.musicService.searchUrl(songId).subscribe(
+      (data: any) => {
+        if (data !== 'error' && data !== null) {
+          window.open(data);
+        } else {
+          console.log('error');
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
         }
       }
     );
   }
   /*收藏音乐*/
   collectingMusic(item) {
+<<<<<<< HEAD
     if (this.isLogin) {
       this.musicService.collectingMusic(this.userid, item.songId, item.songName, item.singerId, item.singerName,
         item.albumId, item.albumName, item.albumPic, item.songTime, item.copyright , item.source).subscribe(
         (data: any) => {
+=======
+    console.log(item);
+    if (this.isLogin) {
+      this.musicService.collectingMusic(this.userid, item.songId, item.songName, item.singerId, item.singerName,
+        item.albumId, item.albumName, item.albumPic, item.songTime, item.copyright).subscribe(
+        (data: any) => {
+          console.log(data);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       });
     }
   }

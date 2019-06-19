@@ -38,13 +38,20 @@ export class LoginComponent implements OnInit {
     if (this.modelType === 'login' ) {
       this.userService.userLogin(this.useridInput, this.passwordInput).subscribe(
         (data: any) => {
+<<<<<<< HEAD
+=======
+          console.log(data);
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
           if ( data.status !== 'error' ) {
             window.localStorage.setItem('userid', this.useridInput);
             window.localStorage.setItem('nickname', data.nickname);
             this.modelType = 'login';
+<<<<<<< HEAD
             this.useridInput = '';
             this.passwordInput = '';
             this.error = false;
+=======
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
             this.el.nativeElement.querySelector('#closeModal').click(); /*关闭modal框*/
             this.router.navigateByUrl('myMusicList');
           } else {
@@ -56,6 +63,7 @@ export class LoginComponent implements OnInit {
     } else if (this.modelType === 'register') {
       this.userService.userRegister(this.useridInput, this.useridInput, this.passwordInput).subscribe(
         (data: any) => {
+<<<<<<< HEAD
           if ( data.status !== 'error' ) {
             window.localStorage.setItem('userid', this.useridInput);
             window.localStorage.setItem('nickname', this.useridInput);
@@ -63,6 +71,14 @@ export class LoginComponent implements OnInit {
             this.useridInput = '';
             this.passwordInput = '';
             this.error = false;
+=======
+          console.log(data);
+          if ( data.status !== 'error' ) {
+            console.log(data);
+            window.localStorage.setItem('userid', this.useridInput);
+            window.localStorage.setItem('nickname', this.useridInput);
+            this.modelType = 'login';
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
             this.el.nativeElement.querySelector('#closeModal').click(); /*关闭modal框*/
             this.router.navigateByUrl('myMusicList');
           } else {

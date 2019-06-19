@@ -1,6 +1,7 @@
 <div class="nav-bar">
   <div class="main">
     <div class="nav-bar-left">
+<<<<<<< HEAD
       <img src="http://47.100.197.56/static/image/music.png"  class="logo"/>
     </div>
     <div class="nav-bar-center">
@@ -9,6 +10,16 @@
           <a [routerLink]="[item.url]">{{item.name}}</a>
         </div>
       </ng-container>
+=======
+      <img src="assets/music.png"  class="logo"/>
+    </div>
+    <div class="nav-bar-center">
+      <div class="music-nav-item" *ngFor="let item of navList;let i = index" [class.active]="item.active" (click)="changeActive(i)">
+        <ng-container *ngIf="item.show">
+          <a [routerLink]="[item.url]">{{item.name}}</a>
+        </ng-container>
+      </div>
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
     </div>
     <div class="nav-bar-right">
       <div class="login" *ngIf="isLogin">

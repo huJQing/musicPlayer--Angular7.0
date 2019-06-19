@@ -20,8 +20,13 @@
     <tr>
       <td width="400">歌曲</td>
       <td width="150"></td>
+<<<<<<< HEAD
       <td width="150">歌手</td>
       <td width="200">专辑</td>
+=======
+      <td>歌手</td>
+      <td>专辑</td>
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       <td>时长</td>
       <td></td>
     </tr>
@@ -30,12 +35,21 @@
     <tr (dblclick)="changeMusicList(i)" *ngFor="let item of musicList; let i = index">
       <td>{{item.songName}}</td>
       <td class="item-control-btn">
+<<<<<<< HEAD
         <img src="http://47.100.197.56/static/image/play.png" title="播放" (click)="changeMusicList(i)">
         <img src="http://47.100.197.56/static/image/add.png" title="收藏" (click)="collectingMusic(item)" *ngIf="isLogin">
         <img src="http://47.100.197.56/static/image/download.png" title="下载" (click)="downloadMusic(item.songId, item.source)">
       </td>
       <td>{{item.singerName}}</td>
       <td style="overflow: hidden">{{item.albumName}}</td>
+=======
+        <img src="assets/play.png" title="播放" (click)="changeMusicList(i)">
+        <img src="assets/add.png" title="收藏" (click)="collectingMusic(item)" *ngIf="isLogin">
+        <img src="assets/download.png" title="下载" (click)="downloadMusic(item.songId, item.songName)">
+      </td>
+      <td>{{item.singerName}}</td>
+      <td>{{item.albumName}}</td>
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
       <td>{{item.songTime/10 | formatTime}}</td>
       <td></td>
     </tr>

@@ -2,7 +2,11 @@
   height: 270px;
   width: 810px;
   margin: 100px 0 0 85px;
+<<<<<<< HEAD
   background-image: url("http://47.100.197.56/static/image/loginTips.png");
+=======
+  background-image: url("../../../../assets/loginTips.png");
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 }
 .login-tips-title{
   display: block;
@@ -15,7 +19,11 @@
   height: 150px;
   width: 230px;
   margin: 180px 0 0 350px;
+<<<<<<< HEAD
   background-image: url("http://47.100.197.56/static/image/disc.png");
+=======
+  background-image: url("../../../../assets/disc.png");
+>>>>>>> 01b6c0b5a183bc6cec7ccf339c469d6ef1d906ba
 }
 .no-music-title{
   font-size: 22px;
