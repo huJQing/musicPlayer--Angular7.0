@@ -1,0 +1,11 @@
+{
+  "/":{
+    "target":"http://47.100.197.56/",
+    "secure":false,
+    "logLevel":"debug",
+    "changeOrigin":true,
+    "pathRewrite": {
+      "^/music": ""
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<div class="searchMusic">
+  <div class="searchForm">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{searchFrom}}</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="javascript: void(0)" (click)="changeSearchFrom('网易云')">网易云</a>
+          <a class="dropdown-item" href="javascript: void(0)" (click)="changeSearchFrom('QQ音乐')">QQ音乐</a>
+        </div>
+      </div>
+      <input type="text" class="form-control" placeholder="请输入关键词" [(ngModel)]="searchValue">
+      <div class="input-group-append">
+        <button type="button" class="btn  search-button " (click)="searchButton()">搜 索</button>
+      </div>
+    </div>
+  </div>
+  <div class="search-music-table">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <td width="400">歌曲</td>
+      <td width="150"></td>
+      <td width="150">歌手</td>
+      <td width="200">专辑</td>
+      <td>时长</td>
+      <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr (dblclick)="changeMusicList(i)" *ngFor="let item of musicList; let i = index">
+      <td>{{item.songName}}</td>
+      <td class="item-control-btn">
+        <img src="http://47.100.197.56/static/image/play.png" title="播放" (click)="changeMusicList(i)">
+        <img src="http://47.100.197.56/static/image/add.png" title="收藏" (click)="collectingMusic(item)" *ngIf="isLogin">
+        <img src="http://47.100.197.56/static/image/download.png" title="下载" (click)="downloadMusic(item.songId, item.source)">
+      </td>
+      <td>{{item.singerName}}</td>
+      <td style="overflow: hidden">{{item.albumName}}</td>
+      <td>{{item.songTime/10 | formatTime}}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <nav aria-label="Page navigation example" class="music-pagination">
+    <ul class="pagination pagination-sm  justify-content-end">
+      <li class="page-item">
+        <a class="page-link" href="javascript:void(0);" aria-label="Previous" (click)="previousPage()">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="javascript:void(0);" [class.item-active]="pageIndex == 1" (click)="clickPageItem(1)">{{firstPaginationIndex}}</a></li>
+      <li class="page-item" *ngFor="let item of paginationItemList">
+        <a class="page-link" href="javascript:void(0);" [class.item-active]="pageIndex == item" (click)="clickPageItem(item)">{{(item !='l'&&item != 'r') ? item:'...'}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="javascript:void(0);" aria-label="Next"  (click)="nextPage()">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,11 @@
+<div class="recommendedMusicList">
+  <div class="music-list" *ngFor="let item of recommendedList">
+    <a class="list-cover"  [routerLink]="['/musicList', item.dissId ]">
+      <img src="http://47.100.197.56/static/image/playMusic.png" class="musicListCover">
+      <img src="{{item.dissImg}}" class="list-cover-img">
+      <div class="list-name">
+        <a>{{item.dissName}}</a>
+      </div>
+    </a>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+.music-list{
+  width: 100%;
+  min-height: 540px;
+  position: relative;
+  margin-bottom: 80px;
+}
+.music-list-info{
+  width: 100%;
+  height: 120px;
+}
+.music-list-logo{
+  width: 120px;
+  height: 120px;
+  border: 1px solid #d8d8d8;
+  padding: 5px;
+  float: left;
+}
+.list-info-container{
+  float: left;
+  width: 825px;
+  height: 120px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+.music-list-title{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+}
+.music-list-author,.music-list-time{
+  color: #c1c1c1;
+  float: left;
+  margin-top: 5px;
+}
+.music-list-listen-num{
+  clear: both;
+  color: #c1c1c1;
+  padding-top: 5px;
+}
+.music-list-time{
+  margin-left: 3em;
+}
+.music-list-table{
+  margin-top: 20px;
+}
+
+tr{
+  color: #000000;
+}
+.table{
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #d8d8d8;
+}
+.table td{
+  border-top: none;
+}
+.table thead tr{
+  color: #b5b5b5;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.02);
+}
+.table tbody tr:hover{
+  background: rgba(190,190,190,.4) !important;
+  cursor: pointer;
+}
+.item-control-btn{
+  width: 150px;
+}
+.item-control-btn img{
+  display: none;
+}
+tr:hover .item-control-btn img{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  float: left;
+}

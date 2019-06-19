@@ -1,0 +1,24 @@
+<div class="nav-bar">
+  <div class="main">
+    <div class="nav-bar-left">
+      <img src="http://47.100.197.56/static/image/music.png"  class="logo"/>
+    </div>
+    <div class="nav-bar-center">
+      <ng-container *ngFor="let item of navList;let i = index">
+        <div class="music-nav-item" *ngIf="item.show" (click)="changeActive(i)" [class.active]="item.active">
+          <a [routerLink]="[item.url]">{{item.name}}</a>
+        </div>
+      </ng-container>
+    </div>
+    <div class="nav-bar-right">
+      <div class="login" *ngIf="isLogin">
+        <div class="nickname">hi,{{nickname}}</div>
+        <button type="button" class="btn btn-sm loginButton" data-toggle="modal" (click)="loginOut()">退出登录</button>
+      </div>
+      <div class="login" *ngIf="!isLogin">
+        <button type="button" class="btn btn-sm loginButton" data-toggle="modal" data-target="#loginModal">登录</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-login></app-login>
